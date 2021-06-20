@@ -11,3 +11,6 @@
 
 # Project files
 **/__pycache__
+
+# Model files
+agents/
