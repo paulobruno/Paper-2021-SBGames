@@ -9,3 +9,5 @@
 [Cc]ommit[-_][Mm]essage*
 [Cc]ommit[-_][Mm]sg*
 
+# Project files
+**/__pycache__
