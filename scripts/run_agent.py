@@ -126,12 +126,13 @@ if __name__ == "__main__":
 
     scores = []
     episode_time = []
-    
     start_time = time()
-        
+            
     for i in trange(args.num_games, leave=True):
         game.set_seed(test_maps.TEST_MAPS[i])
         game.new_episode()
+        
+        ep_start_time = time()
 
         while not game.is_episode_finished():
             state = preprocess(game.get_state().screen_buffer)
@@ -141,21 +142,27 @@ if __name__ == "__main__":
             for _ in range(frame_repeat):
                 game.advance_action()
                 
+        ep_time = time() - ep_start_time
+        episode_time.append(ep_time)
+        
         score = game.get_total_reward()
         scores.append(score)
-        episode_time.append(time() - start_time)
+        
+        if args.log_file:
+            print("{:.2f},{}".format(ep_time, score), file=log_file)
 
         if (not args.disable_window):
             print("Score ep. " + str(i) + ": " + "{:2.0f}".format(score))
             sleep(1.0)
     
+    total_elapsed_time = time() - start_time
     scores = np.array(scores)
     episode_time = np.array(episode_time)
     
     print("Results: mean: %.1f±%.1f," % (scores.mean(), scores.std()), "min: %.1f" % scores.min(), "max: %.1f" % scores.max())
     
     if args.log_file:
-        print("{:.2f},{},{},{},{:.2f}".format(
-            episode_time.sum(), scores.min(), scores.max(), scores.mean(), scores.std()), file=log_file)
+        print("{:.2f},{:.2f},{},{},{},{:.2f}".format(
+            total_elapsed_time, episode_time.sum(), scores.min(), scores.max(), scores.mean(), scores.std()), file=log_file)
                 
     game.close()
