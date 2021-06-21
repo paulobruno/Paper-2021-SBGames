@@ -1,11 +1,12 @@
 #!/bin/bash
 
 case="2_blend"
-combination=("25" "50_1" "50_2" "75" "w" "wc")
 
 # basic x caco
 pair="basic_caco"
 initials="bc"
+
+combination=("25" "50" "75")
 agent=("basic" "caco")
 
 for comb in ${combination[@]}; do
@@ -17,6 +18,8 @@ done
 # basic x flat
 pair="basic_flat"
 initials="bf"
+
+combination=("25" "50_1" "50_2" "75")
 agent=("basic" "flat")
 
 for comb in ${combination[@]}; do
@@ -28,6 +31,8 @@ done
 # basic x animated
 pair="basic_animated"
 initials="ba"
+
+combination=("25" "50" "75")
 agent=("basic" "animated")
 
 for comb in ${combination[@]}; do
