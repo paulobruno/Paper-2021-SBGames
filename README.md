@@ -8,3 +8,16 @@
 
 
 
+### Cite this paper
+
+#### BibTex
+
+```
+@InProceedings{serafim2021assessing,
+  title = {Assessing the Robustness of Deep Q-Network Agents to Changes on Game Object Textures},
+  author  = {Serafim, Paulo Bruno Sousa and Nogueira, Yuri Lenon Barbosa and Cavalcante-Neto, Joaquim Bento and Vidal, Creto Augusto},
+  booktitle = {Proceedings of the XX Brazilian Symposium on Computer Games and Digital Entertainment (SBGames)},
+  pages = {1--9},
+  year = {2021}
+}
+```
