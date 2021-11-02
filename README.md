@@ -6,7 +6,10 @@
 
 [[Page]](https://paulobruno.github.io/publication/SBGames-assessing-robustness/) [[PDF]](https://www.sbgames.org/proceedings2021/ComputacaoFull/217993.pdf)
 
+### Trained Models
 
+You can find the four trained agents in [this folder](https://drive.google.com/drive/folders/1UdxsbmW30HjFtkd2eVxC34UWBHghH5Xd?usp=sharing).  
+To load a model, extract the files then use the Keras command [load_model](https://www.tensorflow.org/api_docs/python/tf/keras/models/load_model).
 
 ### Cite this paper
 
