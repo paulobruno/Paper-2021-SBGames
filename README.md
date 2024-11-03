@@ -8,7 +8,7 @@
 
 ### Trained Models
 
-You can find the four trained agents in [this folder](https://drive.google.com/drive/folders/1UdxsbmW30HjFtkd2eVxC34UWBHghH5Xd?usp=sharing).  
+You can find the four trained agents in [this folder](https://drive.google.com/drive/folders/1_AdWODN26PLjq2rpLIlmct55aA1mu2jD?usp=sharing).  
 To load a model, extract the files then use the Keras command [load_model](https://www.tensorflow.org/api_docs/python/tf/keras/models/load_model).
 
 ### Cite this paper
